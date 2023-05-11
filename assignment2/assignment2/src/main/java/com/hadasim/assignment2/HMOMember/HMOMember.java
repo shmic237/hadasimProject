@@ -32,6 +32,8 @@ public class HMOMember {
     private LocalDate datePositiveResult;
     private LocalDate recoveryDate;
 
+    private String image;
+
     public HMOMember() {
     }
 
@@ -53,7 +55,8 @@ public class HMOMember {
                      LocalDate fourthGetVaccinated,
                      String fourthVaccineManufacturer,
                      LocalDate datePositiveResult,
-                     LocalDate recoveryDate) {
+                     LocalDate recoveryDate,
+                     String image) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -73,9 +76,8 @@ public class HMOMember {
         this.fourthVaccineManufacturer = fourthVaccineManufacturer;
         this.datePositiveResult = datePositiveResult;
         this.recoveryDate = recoveryDate;
+        this.image = image;
     }
-
-
 
     public Long getId() {
         return id;
@@ -229,6 +231,14 @@ public class HMOMember {
         this.recoveryDate = recoveryDate;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
     @Override
     public String toString() {
         return "HMOMember{" +
@@ -251,6 +261,7 @@ public class HMOMember {
             ", fourthVaccineManufacturer='" + fourthVaccineManufacturer + '\'' +
             ", datePositiveResult=" + datePositiveResult +
             ", recoveryDate=" + recoveryDate +
+            ", image='" + image + '\'' +
             '}';
     }
 }

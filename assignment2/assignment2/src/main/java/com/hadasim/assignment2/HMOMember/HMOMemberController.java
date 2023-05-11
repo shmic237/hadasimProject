@@ -15,6 +15,7 @@ public class HMOMemberController {
 
     @Autowired
     public HMOMemberController(HMOMemberService hmoMemberService) {
+
         this.hmoMemberService = hmoMemberService;
     }
 
@@ -51,36 +52,9 @@ public class HMOMemberController {
      * Deletes the member in the HMO, whose ID was received
      * @param id
      */
-    @DeleteMapping("/{id}")
+    @DeleteMapping("hmomember/delete/{id}")
     public void deleteMember(@PathVariable("id") long id) {
         hmoMemberService.deleteMemberById(id);
     }
 
-
-//    @PostMapping
-//    public void registerNewMember(@RequestBody HMOMember member) {
-//        boolean memberSaved = hmoMemberService.addNewMember(member);
-//        if(memberSaved == false) {
-//            throw new RuntimeException(
-//                "HMO Member with id exists");
-//        } else {
-//
-//        }
-//
-//
-//    }
-
-    //    @GetMapping("/hmomember/{id}")
-//    public HMOMember getMemberById(@PathVariable("id") long id) {
-//        return hmoMemberService.getMember(id);
-//    }
-
-
-
-
-//    @GetMapping("/hmomember/{id}")
-//    public HMOMember showMember(@PathVariable Long id) {
-//        HMOMember member = hmoMemberService.getHMOMember(id);
-//        return member;
-//    }
 }

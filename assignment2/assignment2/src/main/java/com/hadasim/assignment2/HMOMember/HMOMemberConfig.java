@@ -32,9 +32,10 @@ public class HMOMemberConfig {
                 LocalDate.of(2021, Month.SEPTEMBER, 20),
                 "Pfizer",
                 null,
-                null,
+                "does not get vaccineted",
                 LocalDate.of(2022, Month.JANUARY, 22),
-                LocalDate.of(2021, Month.FEBRUARY, 1)
+                LocalDate.of(2021, Month.FEBRUARY, 1),
+                "img/woman.png"
             );
             HMOMember itamar = new HMOMember(
                 206308587L,
@@ -53,9 +54,10 @@ public class HMOMemberConfig {
                 LocalDate.of(2021, Month.SEPTEMBER, 20),
                 "Pfizer",
                 null,
-                null,
+                "does not get vaccineted",
                 LocalDate.of(2022, Month.JANUARY, 22),
-                LocalDate.of(2021, Month.FEBRUARY, 1)
+                LocalDate.of(2021, Month.FEBRUARY, 1),
+                "img/man.png"
             );
 
             repository.saveAll(

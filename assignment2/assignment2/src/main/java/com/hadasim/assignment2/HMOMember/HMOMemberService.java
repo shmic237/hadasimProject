@@ -14,6 +14,7 @@ public class HMOMemberService {
 
     @Autowired
     public HMOMemberService(HMOMemberRepository hmoMemberRepository) {
+
         this.hmoMemberRepository = hmoMemberRepository;
     }
 
@@ -37,6 +38,7 @@ public class HMOMemberService {
             throw new RuntimeException(
                 "HMO Member with id exists");
         }
+
 
         // Checking that the mobile phone has 10 digits, if not throwing an exception
         if (member.getMobilePhone().length() != 10) {
@@ -63,19 +65,15 @@ public class HMOMemberService {
          * Search if one of the dates was not received
          */
         if (member.getFirstGetVaccinated() == null) {
-            member.setFirstGetVaccinated(LocalDate.parse("1111-11-11"));
             member.setFirstVaccineManufacturer("does not get vaccineted");
         }
         if (member.getSecondGetVaccinated() == null) {
-            member.setSecondGetVaccinated(LocalDate.parse("1111-11-11"));
             member.setSecondVaccineManufacturer("does not get vaccineted");
         }
         if (member.getThirdGetVaccinated() == null) {
-            member.setThirdGetVaccinated(LocalDate.parse("1111-11-11"));
             member.setThirdVaccineManufacturer("does not get vaccineted");
         }
         if (member.getFourthGetVaccinated() == null) {
-            member.setFourthGetVaccinated(LocalDate.parse("1111-11-11"));
             member.setFourthVaccineManufacturer("does not get vaccineted");
         }
 
@@ -89,28 +87,8 @@ public class HMOMemberService {
     }
 
     public void deleteMemberById(Long id) {
+
         hmoMemberRepository.deleteById(id);
     }
-
-
-
-
-//    public Optional<HMOMember> getMember(Long id){
-//        Optional<HMOMember> memberOptional = hmoMemberRepository.findById(id);
-//        if (!memberOptional.isPresent()) {
-//            throw new RuntimeException(
-//                "HMO Member with id does not exists");
-//        }
-//        return memberOptional;
-//    }
-
-    //    public Optional<HMOMember> getHMOMemberById(Long id) {
-//            return hmoMemberRepository.findMemberById(id);
-//
-//    }
-
-
-
-
 
 }
