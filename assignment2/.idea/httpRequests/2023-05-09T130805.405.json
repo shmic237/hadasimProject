@@ -1,0 +1,7 @@
+{
+  "timestamp": "2023-05-09T10:08:05.870+00:00",
+  "status": 405,
+  "error": "Method Not Allowed",
+  "message": "Method 'DELETE' is not supported.",
+  "path": "/hmomember/123456789"
+}

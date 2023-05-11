@@ -1,0 +1,7 @@
+{
+  "timestamp": "2023-05-09T09:31:42.288+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "HMO Member with id exists",
+  "path": "/hmomember"
+}
