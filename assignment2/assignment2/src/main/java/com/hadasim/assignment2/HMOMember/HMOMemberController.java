@@ -58,11 +58,5 @@ public class HMOMemberController {
         hmoMemberService.deleteMemberById(id);
     }
 
-    @PostMapping("/hmmomember/imageupload")
-    public String imageUpload(@RequestParam MultipartFile image) {
-        System.out.println(image.getOriginalFilename());
-
-        return "hmomember";
-    }
 
 }
