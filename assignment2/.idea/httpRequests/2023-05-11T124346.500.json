@@ -1,0 +1,7 @@
+{
+  "timestamp": "2023-05-11T09:43:46.851+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "The date of the recovery is incorrect because is before the date of positive resualt",
+  "path": "/hmomember/addmember"
+}
