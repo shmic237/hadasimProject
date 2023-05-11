@@ -42,7 +42,7 @@ public class HMOMemberController {
      * Adds a new member to the HMO member database.
      * @param member
      */
-    @PostMapping("/hmomember")
+    @PostMapping("/hmomember/addmember")
     public void addNewMember(@RequestBody HMOMember member) {
         hmoMemberService.addNewMember(member);
     }

@@ -44,9 +44,12 @@ public class HMOMemberService {
         }
 
         //Checking if the date of the recovery is before the date of receiving a positive answer and throwing an exception
-        if (member.getRecoveryDate().isBefore(member.getDatePositiveResult())) {
-            throw new ArithmeticException("The date of the recovery is incorrect because is before the date of positive resualt");
+        if(member.getDatePositiveResult() != null && member.getRecoveryDate() != null) {
+            if (member.getRecoveryDate().isBefore(member.getDatePositiveResult())) {
+                throw new ArithmeticException("The date of the recovery is incorrect because is before the date of positive resualt");
+            }
         }
+
 
         //Checking that the first name and last name are all letters
         if (!member.getFirstName().chars().allMatch(Character::isLetter) ||
