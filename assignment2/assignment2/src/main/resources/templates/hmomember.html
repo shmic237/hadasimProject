@@ -5,7 +5,7 @@
     <title>HMO Member</title>
 </head>
 <body>
-<form th:action="@{/hmomember}">
+<form th:action="@{/hmomember}" enctype="multipart/form-data">
     <label>First Name:</label>
     <input type="text" name="firstName"><br>
     <label>Last Name:</label>
@@ -25,7 +25,7 @@
     <label>Mobile Phone:</label>
     <input type="text" name="mobilePhone"><br>
     <label>Image</label>
-    <input type="file" name="image"><br>
+    <input type="file" name="image" accept="image/png, image/jpg" /><br>
     <input type="submit" value="Add Member">
 </form>
 

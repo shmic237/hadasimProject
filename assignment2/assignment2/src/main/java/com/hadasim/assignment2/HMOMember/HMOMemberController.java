@@ -2,6 +2,7 @@ package com.hadasim.assignment2.HMOMember;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.Optional;
@@ -55,6 +56,13 @@ public class HMOMemberController {
     @DeleteMapping("hmomember/delete/{id}")
     public void deleteMember(@PathVariable("id") long id) {
         hmoMemberService.deleteMemberById(id);
+    }
+
+    @PostMapping("/hmmomember/imageupload")
+    public String imageUpload(@RequestParam MultipartFile image) {
+        System.out.println(image.getOriginalFilename());
+
+        return "hmomember";
     }
 
 }
